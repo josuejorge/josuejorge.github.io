@@ -1,282 +1,475 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Josué Jorge — QA & DevOps Engineer</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Josué Jorge — QA & DevOps Engineer</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav>
-  <span class="nav-logo">JJ</span>
-  <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#habilidades">Habilidades</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo">JJ</span>
+    <ul class="nav-links">
+      <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+      <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+      <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+      <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <select id="lang-select">
+        <option value="pt-BR">PT-BR</option>
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+      </select>
+    </div>
+  </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    
-    <img
-        class="avatar"
-        src="https://avatars.githubusercontent.com/u/41090986?v=4"
-        alt="Avatar">
-    <h1>Josué Jorge</h1>
-    <p class="hero-role">QA Engineer Specialist</p>
-    <p class="hero-desc">
-      Especialista em qualidade de software, automação de testes e integração contínua.
-      Apaixonado por entregar software confiável com eficiência e rastreabilidade.
-    </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
 
-    <div class="hero-links">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/41090986?v=4" alt="Avatar">
+      <h1>Josué Jorge</h1>
+      <p class="hero-role" data-i18n="hero.role">QA Engineer Specialist</p>
+      <p class="hero-desc" data-i18n="hero.desc">
+        Especialista em qualidade de software, automação de testes e integração contínua.
+        Apaixonado por entregar software confiável com eficiência e rastreabilidade.
+      </p>
+
+      <div class="hero-links">
+        <a class="btn btn-primary" href="https://github.com/josuejorge" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+          </svg>
+          GitHub
+        </a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/josue-jorge/" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <h2 class="section-title" data-i18n="about.title">Sobre mim</h2>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p data-i18n="about.p1" data-i18n-html>
+          Sou um Profissional com mais de 7 anos de experiência em tecnologia, com foco em <strong>garantia de qualidade
+            de software</strong>, especializado na criação
+          de automações de testes robustas usando Robot Framework, Cypress, Playwright e Selenium.
+        </p>
+
+        <p data-i18n="about.p2" data-i18n-html>
+          Complemento minha atuação em QA com conhecimentos em <strong>DevOps voltado para automação de testes</strong>,
+          incluindo pipelines CI/CD com Jenkins, Docker para provisionamento de ambientes, monitoramento com Grafana e
+          Prometheus e análise de qualidade de código com SonarQube.
+        </p>
+        <p data-i18n="about.p3">
+          Tenho experiência com múltiplos bancos de dados (SQL Server, PostgreSQL, Oracle, MongoDB, Redis),
+          mensageria com RabbitMQ, e metodologias ágeis como Scrum e Kanban.
+        </p>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-num">8+</div>
+          <div class="stat-label" data-i18n="stat.frameworks">Frameworks de teste</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">5+</div>
+          <div class="stat-label" data-i18n="stat.languages">Linguagens</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">6+</div>
+          <div class="stat-label" data-i18n="stat.databases">Bancos de dados</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">CI/CD</div>
+          <div class="stat-label" data-i18n="stat.pipelines">Pipelines & Deploy</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlights">
+      <div class="highlight-item">
+        <div class="highlight-dot" style="background: var(--accent);"></div>
+        <div class="highlight-text">
+          <strong data-i18n="hl.automation">Automação de Testes</strong>
+          <span data-i18n="hl.automation.desc">Testes E2E, API, unitários e de regressão com múltiplas ferramentas</span>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-dot" style="background: var(--accent2);"></div>
+        <div class="highlight-text">
+          <strong data-i18n="hl.cicd">CI/CD & DevOps</strong>
+          <span data-i18n="hl.cicd.desc">Esteiras com Jenkins, GitHub Actions e Azure DevOps, Docker Compose e Flyway</span>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-dot" style="background: var(--accent3);"></div>
+        <div class="highlight-text">
+          <strong data-i18n="hl.observability">Observabilidade</strong>
+          <span data-i18n="hl.observability.desc">Monitoramento e alertas com Grafana, Prometheus e análise com Sonar</span>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-dot" style="background: #fb923c;"></div>
+        <div class="highlight-text">
+          <strong data-i18n="hl.agile">Metodologias Ágeis</strong>
+          <span data-i18n="hl.agile.desc">Scrum, Kanban e gestão de tarefas com Jira em times de produto</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- HABILIDADES -->
+  <section id="habilidades">
+    <h2 class="section-title" data-i18n="skills.title">Habilidades</h2>
+    <p class="section-subtitle" data-i18n="skills.subtitle">Tecnologias e ferramentas que utilizo no dia a dia</p>
+
+    <div class="skills-categories">
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">🧪</div>
+          <span class="skill-card-title" data-i18n="card.automation">Automação de Testes</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">Robot Framework</span>
+          <span class="tag">Cypress.io</span>
+          <span class="tag">Playwright</span>
+          <span class="tag">Selenium</span>
+          <span class="tag">JUnit</span>
+          <span class="tag">Cucumber</span>
+          <span class="tag">Mockito</span>
+          <span class="tag">REST Assured</span>
+          <span class="tag">TOSCA</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">💻</div>
+          <span class="skill-card-title" data-i18n="card.languages">Linguagens</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Java</span>
+          <span class="tag">Javascript</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">⚙️</div>
+          <span class="skill-card-title" data-i18n="card.cicd">CI/CD & Build</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">Jenkins</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Azure DevOps</span>
+          <span class="tag">Maven</span>
+          <span class="tag">Tomcat</span>
+          <span class="tag">Git</span>
+          <span class="tag">Flyway</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">🗄️</div>
+          <span class="skill-card-title" data-i18n="card.databases">Banco de Dados</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Oracle</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Redis</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">📊</div>
+          <span class="skill-card-title" data-i18n="card.observability">Observabilidade</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">Grafana</span>
+          <span class="tag">Prometheus</span>
+          <span class="tag">SonarQube</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">📦</div>
+          <span class="skill-card-title" data-i18n="card.infra">Infra & Mensageria</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">Docker</span>
+          <span class="tag">Docker Compose</span>
+          <span class="tag">Nginx</span>
+          <span class="tag">Keycloak</span>
+          <span class="tag">RabbitMQ</span>
+          <span class="tag">Mainframe</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">🔌</div>
+          <span class="skill-card-title" data-i18n="card.api">Testes de API</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">REST Assured</span>
+          <span class="tag">Playwright API</span>
+          <span class="tag">Robot Framework</span>
+          <span class="tag">REST</span>
+          <span class="tag">SOAP</span>
+          <span class="tag">Postman</span>
+          <span class="tag">Insomnia</span>
+          <span class="tag">Swagger</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">📋</div>
+          <span class="skill-card-title" data-i18n="card.management">Gestão & Metodologias</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">Scrum</span>
+          <span class="tag">Kanban</span>
+          <span class="tag">Jira</span>
+          <span class="tag">XRay</span>
+          <span class="tag">Zephyr</span>
+          <span class="tag">Azure Test Plans</span>
+          <span class="tag">ALM</span>
+          <span class="tag">Shift-Left Testing</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">📋</div>
+          <span class="skill-card-title" data-i18n="card.strategies">Estratégias de teste</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag" data-i18n="tag.functional">Funcionais</span>
+          <span class="tag" data-i18n="tag.automated">Automatizados</span>
+          <span class="tag" data-i18n="tag.exploratory">Exploratórios</span>
+          <span class="tag" data-i18n="tag.regression">Regressivos</span>
+          <span class="tag">Feature Branch</span>
+          <span class="tag">Smoke</span>
+          <span class="tag" data-i18n="tag.integration">Integração</span>
+          <span class="tag" data-i18n="tag.accessibility">Acessibilidade</span>
+          <span class="tag">UAT / E2E</span>
+          <span class="tag">BDD / Gherkin</span>
+          <span class="tag" data-i18n="tag.blackbox">Caixa Preta</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">📱</div>
+          <span class="skill-card-title" data-i18n="card.mobile">Mobile Testing</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">Appium</span>
+          <span class="tag">Flutter</span>
+          <span class="tag">BrowserStack</span>
+          <span class="tag">AWS Device Farm</span>
+          <span class="tag">Android Studio</span>
+          <span class="tag">WebDriverIO</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">🚀</div>
+          <span class="skill-card-title" data-i18n="card.performance">Testes de Performance</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">k6</span>
+          <span class="tag">JMeter</span>
+          <span class="tag" data-i18n="tag.load">Carga</span>
+          <span class="tag" data-i18n="tag.stress">Estresse</span>
+          <span class="tag" data-i18n="tag.spike">Pico</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- PROJETOS -->
+  <section id="projetos">
+    <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
+    <p class="section-subtitle" data-i18n="projects.subtitle">Laboratórios práticos e automações que demonstram minhas habilidades</p>
+
+    <div class="skills-categories">
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">🔧</div>
+          <span class="skill-card-title" data-i18n="proj.devops.title">Tasks Backend — Lab DevOps</span>
+        </div>
+        <p style="color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.6;"
+          data-i18n="proj.devops.desc">
+          Laboratório DevOps completo com pipeline CI/CD no Jenkins, rollback automatizado,
+          Docker Compose orquestrando 8 serviços, autenticação OAuth2 com Keycloak,
+          mensageria com RabbitMQ, cache com Redis, migrations com Flyway e
+          observabilidade com Prometheus + Grafana.
+        </p>
+        <div class="skill-tags">
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">Docker Compose</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Keycloak</span>
+          <span class="tag">RabbitMQ</span>
+          <span class="tag">Redis</span>
+          <span class="tag">Nginx</span>
+          <span class="tag">Flyway</span>
+          <span class="tag">Grafana</span>
+          <span class="tag">Prometheus</span>
+          <span class="tag">Testcontainers</span>
+        </div>
+        <div style="margin-top: 1rem;">
+          <a class="btn btn-outline" href="https://github.com/josuejorge/tasks-backend" target="_blank"
+            style="font-size: 0.8rem; padding: 0.4rem 1rem;" data-i18n="btn.github">Ver no GitHub</a>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">🧪</div>
+          <span class="skill-card-title" data-i18n="proj.api.title">API Tests with Playwright</span>
+        </div>
+        <p style="color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.6;"
+          data-i18n="proj.api.desc">
+          Automação de testes de API com Playwright e TypeScript, cobrindo 51 cenários
+          de Login, Usuários, Produtos e Carrinhos. Arquitetura com Service Pattern,
+          fixtures customizadas, validação de schema e dados dinâmicos com Faker.
+        </p>
+        <div class="skill-tags">
+          <span class="tag">Playwright</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Service Pattern</span>
+          <span class="tag">Fixtures</span>
+          <span class="tag">Schema Validation</span>
+          <span class="tag">Faker.js</span>
+        </div>
+        <div style="margin-top: 1rem;">
+          <a class="btn btn-outline" href="https://github.com/josuejorge/APITestsWithPlaywright" target="_blank"
+            style="font-size: 0.8rem; padding: 0.4rem 1rem;" data-i18n="btn.github">Ver no GitHub</a>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">🌐</div>
+          <span class="skill-card-title" data-i18n="proj.ui.title">UI Automation — Multi-Framework</span>
+        </div>
+        <p style="color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.6;"
+          data-i18n="proj.ui.desc">
+          Mesma aplicação (Swag Labs) automatizada em 4 frameworks diferentes,
+          demonstrando domínio e versatilidade em automação E2E web.
+        </p>
+        <div class="skill-tags">
+          <span class="tag">Playwright</span>
+          <span class="tag">Cypress</span>
+          <span class="tag">Selenium</span>
+          <span class="tag">Robot Framework</span>
+          <span class="tag">Page Object</span>
+        </div>
+        <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <a class="btn btn-outline" href="https://github.com/josuejorge/saucedemoUIAutomationPlaywright"
+            target="_blank" style="font-size: 0.8rem; padding: 0.4rem 1rem;">Playwright</a>
+          <a class="btn btn-outline" href="https://github.com/josuejorge/saucedemoUIAutomationCypress" target="_blank"
+            style="font-size: 0.8rem; padding: 0.4rem 1rem;">Cypress</a>
+          <a class="btn btn-outline" href="https://github.com/josuejorge/saucedemoUIAutomationSelenium" target="_blank"
+            style="font-size: 0.8rem; padding: 0.4rem 1rem;">Selenium</a>
+          <a class="btn btn-outline" href="https://github.com/josuejorge/saucedemoUIAutomationRobot" target="_blank"
+            style="font-size: 0.8rem; padding: 0.4rem 1rem;">Robot</a>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon">⚡</div>
+          <span class="skill-card-title" data-i18n="proj.perf.title">Testes de Performance com k6</span>
+        </div>
+        <p style="color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.6;"
+          data-i18n="proj.perf.desc">
+          Testes de carga, estresse, pico e longa duração utilizando k6
+          para validação de performance de APIs.
+        </p>
+        <div class="skill-tags">
+          <span class="tag">k6</span>
+          <span class="tag" data-i18n="tag.load">Carga</span>
+          <span class="tag" data-i18n="tag.stress">Estresse</span>
+          <span class="tag">Smoke</span>
+        </div>
+        <div style="margin-top: 1rem;">
+          <a class="btn btn-outline" href="https://github.com/josuejorge/testes_performance_k6" target="_blank"
+            style="font-size: 0.8rem; padding: 0.4rem 1rem;" data-i18n="btn.github">Ver no GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h2 class="section-title" data-i18n="contact.title">Contato</h2>
+    <p class="section-subtitle" data-i18n="contact.subtitle">Vamos conversar</p>
+
+    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
       <a class="btn btn-primary" href="https://github.com/josuejorge" target="_blank">
-        <!-- github svg -->
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-        GitHub
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+        </svg>
+        <span data-i18n="btn.viewgithub">Ver GitHub</span>
       </a>
       <a class="btn btn-outline" href="https://www.linkedin.com/in/josue-jorge/" target="_blank">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
         LinkedIn
       </a>
     </div>
-  </div>
-</section>
+  </section>
 
-<hr class="section-divider">
+  <footer>
+    <p data-i18n="footer" data-i18n-html>Feito com ❤️ por <a href="https://github.com/josuejorge">Josué Jorge</a> &mdash; 2026</p>
+  </footer>
 
-<!-- SOBRE -->
-<section id="sobre">
-  <h2 class="section-title">Sobre mim</h2> 
-
-  <div class="about-grid">
-    <div class="about-text">
-      <p>
-  Sou um Profissional com mais de 7 anos de experiência em tecnologia, com foco em <strong>garantia de qualidade de software</strong>, especializado na criação
-  de automações de testes robustas usando Robot Framework, Cypress, Playwright e Selenium.
-</p>
-
-<p>
-  Complemento minha atuação em QA com conhecimentos em <strong>DevOps voltado para automação de testes</strong>, incluindo pipelines CI/CD com Jenkins, Docker para provisionamento de ambientes, monitoramento com Grafana e Prometheus e análise de qualidade de código com SonarQube.
-</p>
-      <p>
-        Tenho experiência com múltiplos bancos de dados (SQL Server, PostgreSQL, Oracle, MongoDB, Redis),
-        mensageria com RabbitMQ, e metodologias ágeis como Scrum e Kanban.
-      </p>
-    </div>
-
-    <div class="stat-grid">
-      <div class="stat-box">
-        <div class="stat-num">5+</div>
-        <div class="stat-label">Frameworks de teste</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">3+</div>
-        <div class="stat-label">Linguagens</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">6+</div>
-        <div class="stat-label">Bancos de dados</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">CI/CD</div>
-        <div class="stat-label">Pipelines & Deploy</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="highlights">
-    <div class="highlight-item">
-      <div class="highlight-dot" style="background: var(--accent);"></div>
-      <div class="highlight-text">
-        <strong>Automação de Testes</strong>
-        Testes E2E, API, unitários e de regressão com múltiplas ferramentas
-      </div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-dot" style="background: var(--accent2);"></div>
-      <div class="highlight-text">
-        <strong>CI/CD & DevOps</strong>
-        Esteiras de integração e entrega contínua com Jenkins e versionamento Git
-      </div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-dot" style="background: var(--accent3);"></div>
-      <div class="highlight-text">
-        <strong>Observabilidade</strong>
-        Monitoramento e alertas com Grafana, Prometheus e análise com Sonar
-      </div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-dot" style="background: #fb923c;"></div>
-      <div class="highlight-text">
-        <strong>Metodologias Ágeis</strong>
-        Scrum, Kanban e gestão de tarefas com Jira em times de produto
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- HABILIDADES -->
-<section id="habilidades">
-  <h2 class="section-title">Habilidades</h2>
-  <p class="section-subtitle">Tecnologias e ferramentas que utilizo no dia a dia</p>
-
-  <div class="skills-categories">
-
-    <div class="skill-card">
-      <div class="skill-card-header">
-        <div class="skill-icon">🧪</div>
-        <span class="skill-card-title">Automação de Testes</span>
-      </div>
-      <div class="skill-tags">
-        <span class="tag">Robot Framework</span>
-        <span class="tag">Cypress.io</span>
-        <span class="tag">Playwright</span>
-        <span class="tag">Selenium</span>
-        <span class="tag">JUnit</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-header">
-        <div class="skill-icon">💻</div>
-        <span class="skill-card-title">Linguagens</span>
-      </div>
-      <div class="skill-tags">
-        <span class="tag">Python</span>
-        <span class="tag">Java</span>
-        <span class="tag">Javascript</span>
-        <span class="tag">SQL</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-header">
-        <div class="skill-icon">⚙️</div>
-        <span class="skill-card-title">CI/CD & Build</span>
-      </div>
-      <div class="skill-tags">
-        <span class="tag">Jenkins</span>
-        <span class="tag">Maven</span>
-        <span class="tag">Tomcat</span>
-        <span class="tag">Git</span>
-        <span class="tag">Deploy</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-header">
-        <div class="skill-icon">🗄️</div>
-        <span class="skill-card-title">Banco de Dados</span>
-      </div>
-      <div class="skill-tags">
-        <span class="tag">PostgreSQL</span>
-        <span class="tag">Oracle</span>
-        <span class="tag">SQL Server</span>
-        <span class="tag">MongoDB</span>
-        <span class="tag">Redis</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-header">
-        <div class="skill-icon">📊</div>
-        <span class="skill-card-title">Observabilidade</span>
-      </div>
-      <div class="skill-tags">
-        <span class="tag">Grafana</span>
-        <span class="tag">Prometheus</span>
-        <span class="tag">SonarQube</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-header">
-        <div class="skill-icon">📦</div>
-        <span class="skill-card-title">Infra & Mensageria</span>
-      </div>
-      <div class="skill-tags">
-        <span class="tag">Docker</span>
-        <span class="tag">RabbitMQ</span>
-        <span class="tag">Mainframe</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-header">
-        <div class="skill-icon">🔌</div>
-        <span class="skill-card-title">Testes de API</span>
-      </div>
-      <div class="skill-tags">
-        <span class="tag">Robot Framework</span>
-        <span class="tag">RequestsLibrary</span>
-        <span class="tag">REST</span>
-        <span class="tag">SOAP</span>
-        <span class="tag">Postman</span>
-        <span class="tag">Insomnia</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-header">
-        <div class="skill-icon">📋</div>
-        <span class="skill-card-title">Gestão & Metodologias</span>
-      </div>
-      <div class="skill-tags">
-        <span class="tag">Scrum</span>
-        <span class="tag">Kanban</span>
-        <span class="tag">Jira</span>
-      </div>      
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-header">
-        <div class="skill-icon">📋</div>
-        <span class="skill-card-title">Estratégias de teste</span>
-      </div>
-      <div class="skill-tags">
-        <span class="tag">Funcionais</span>
-        <span class="tag">Automatizados</span>
-        <span class="tag">Exploratórios</span>
-        <span class="tag">Regressivos</span>
-        <span class="tag">Smoke</span>
-        <span class="tag">Integração</span>
-        <span class="tag">Acessibilidade</span>
-        <span class="tag">UAT, E2E</span>
-      </div>
-      </div>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- CONTATO -->
-<section id="contato">
-  <h2 class="section-title">Contato</h2>
-  <p class="section-subtitle">Vamos conversar</p>
-
-  <div style="display:flex; gap:1rem; flex-wrap:wrap;">
-    <a class="btn btn-primary" href="https://github.com/josuejorge" target="_blank">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-      Ver GitHub
-    </a>
-    <a class="btn btn-outline" href="https://www.linkedin.com/in/josue-jorge/" target="_blank">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      LinkedIn
-    </a>
-  </div>
-</section>
-
-<footer>
-  <p>Feito com ❤️ por <a href="https://github.com/josuejorge">Josué Jorge</a> &mdash; 2026</p>
-</footer>
-
+  <script src="js/i18n.js"></script>
 </body>
+
 </html>

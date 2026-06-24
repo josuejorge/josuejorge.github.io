@@ -1,0 +1,222 @@
+const translations = {
+  "pt-BR": {
+    "nav.about": "Sobre",
+    "nav.skills": "Habilidades",
+    "nav.projects": "Projetos",
+    "nav.contact": "Contato",
+    "hero.role": "QA Engineer Specialist",
+    "hero.desc": "Especialista em qualidade de software, automação de testes e integração contínua. Apaixonado por entregar software confiável com eficiência e rastreabilidade.",
+    "about.title": "Sobre mim",
+    "about.p1": 'Sou um Profissional com mais de 7 anos de experiência em tecnologia, com foco em <strong>garantia de qualidade de software</strong>, especializado na criação de automações de testes robustas usando Robot Framework, Cypress, Playwright e Selenium.',
+    "about.p2": 'Complemento minha atuação em QA com conhecimentos em <strong>DevOps voltado para automação de testes</strong>, incluindo pipelines CI/CD com Jenkins, Docker para provisionamento de ambientes, monitoramento com Grafana e Prometheus e análise de qualidade de código com SonarQube.',
+    "about.p3": "Tenho experiência com múltiplos bancos de dados (SQL Server, PostgreSQL, Oracle, MongoDB, Redis), mensageria com RabbitMQ, e metodologias ágeis como Scrum e Kanban.",
+    "stat.frameworks": "Frameworks de teste",
+    "stat.languages": "Linguagens",
+    "stat.databases": "Bancos de dados",
+    "stat.pipelines": "Pipelines & Deploy",
+    "hl.automation": "Automação de Testes",
+    "hl.automation.desc": "Testes E2E, API, unitários e de regressão com múltiplas ferramentas",
+    "hl.cicd": "CI/CD & DevOps",
+    "hl.cicd.desc": "Esteiras com Jenkins, GitHub Actions e Azure DevOps, Docker Compose e Flyway",
+    "hl.observability": "Observabilidade",
+    "hl.observability.desc": "Monitoramento e alertas com Grafana, Prometheus e análise com Sonar",
+    "hl.agile": "Metodologias Ágeis",
+    "hl.agile.desc": "Scrum, Kanban e gestão de tarefas com Jira em times de produto",
+    "skills.title": "Habilidades",
+    "skills.subtitle": "Tecnologias e ferramentas que utilizo no dia a dia",
+    "card.automation": "Automação de Testes",
+    "card.languages": "Linguagens",
+    "card.cicd": "CI/CD & Build",
+    "card.databases": "Banco de Dados",
+    "card.observability": "Observabilidade",
+    "card.infra": "Infra & Mensageria",
+    "card.api": "Testes de API",
+    "card.management": "Gestão & Metodologias",
+    "card.strategies": "Estratégias de teste",
+    "card.mobile": "Mobile Testing",
+    "card.performance": "Testes de Performance",
+    "tag.functional": "Funcionais",
+    "tag.automated": "Automatizados",
+    "tag.exploratory": "Exploratórios",
+    "tag.regression": "Regressivos",
+    "tag.integration": "Integração",
+    "tag.accessibility": "Acessibilidade",
+    "tag.blackbox": "Caixa Preta",
+    "tag.load": "Carga",
+    "tag.stress": "Estresse",
+    "tag.spike": "Pico",
+    "projects.title": "Projetos",
+    "projects.subtitle": "Laboratórios práticos e automações que demonstram minhas habilidades",
+    "proj.devops.title": "Tasks Backend — Lab DevOps",
+    "proj.devops.desc": "Laboratório DevOps completo com pipeline CI/CD no Jenkins, rollback automatizado, Docker Compose orquestrando 8 serviços, autenticação OAuth2 com Keycloak, mensageria com RabbitMQ, cache com Redis, migrations com Flyway e observabilidade com Prometheus + Grafana.",
+    "proj.api.title": "API Tests with Playwright",
+    "proj.api.desc": "Automação de testes de API com Playwright e TypeScript, cobrindo 51 cenários de Login, Usuários, Produtos e Carrinhos. Arquitetura com Service Pattern, fixtures customizadas, validação de schema e dados dinâmicos com Faker.",
+    "proj.ui.title": "UI Automation — Multi-Framework",
+    "proj.ui.desc": "Mesma aplicação (Swag Labs) automatizada em 4 frameworks diferentes, demonstrando domínio e versatilidade em automação E2E web.",
+    "proj.perf.title": "Testes de Performance com k6",
+    "proj.perf.desc": "Testes de carga, estresse, pico e longa duração utilizando k6 para validação de performance de APIs.",
+    "btn.github": "Ver no GitHub",
+    "contact.title": "Contato",
+    "contact.subtitle": "Vamos conversar",
+    "btn.viewgithub": "Ver GitHub",
+    "footer": 'Feito com ❤️ por <a href="https://github.com/josuejorge">Josué Jorge</a> &mdash; 2026'
+  },
+  en: {
+    "nav.about": "About",
+    "nav.skills": "Skills",
+    "nav.projects": "Projects",
+    "nav.contact": "Contact",
+    "hero.role": "QA Engineer Specialist",
+    "hero.desc": "Software quality specialist, test automation and continuous integration. Passionate about delivering reliable software with efficiency and traceability.",
+    "about.title": "About me",
+    "about.p1": 'Professional with over 7 years of experience in technology, focused on <strong>software quality assurance</strong>, specialised in building robust test automations using Robot Framework, Cypress, Playwright and Selenium.',
+    "about.p2": 'I complement my QA expertise with <strong>DevOps skills focused on test automation</strong>, including CI/CD pipelines with Jenkins, Docker for environment provisioning, monitoring with Grafana and Prometheus, and code quality analysis with SonarQube.',
+    "about.p3": "Experienced with multiple databases (SQL Server, PostgreSQL, Oracle, MongoDB, Redis), messaging with RabbitMQ, and agile methodologies such as Scrum and Kanban.",
+    "stat.frameworks": "Test frameworks",
+    "stat.languages": "Languages",
+    "stat.databases": "Databases",
+    "stat.pipelines": "Pipelines & Deploy",
+    "hl.automation": "Test Automation",
+    "hl.automation.desc": "E2E, API, unit and regression tests with multiple tools",
+    "hl.cicd": "CI/CD & DevOps",
+    "hl.cicd.desc": "Pipelines with Jenkins, GitHub Actions and Azure DevOps, Docker Compose and Flyway",
+    "hl.observability": "Observability",
+    "hl.observability.desc": "Monitoring and alerting with Grafana, Prometheus and Sonar analysis",
+    "hl.agile": "Agile Methodologies",
+    "hl.agile.desc": "Scrum, Kanban and task management with Jira in product teams",
+    "skills.title": "Skills",
+    "skills.subtitle": "Technologies and tools I use daily",
+    "card.automation": "Test Automation",
+    "card.languages": "Languages",
+    "card.cicd": "CI/CD & Build",
+    "card.databases": "Databases",
+    "card.observability": "Observability",
+    "card.infra": "Infra & Messaging",
+    "card.api": "API Testing",
+    "card.management": "Management & Methodologies",
+    "card.strategies": "Testing Strategies",
+    "card.mobile": "Mobile Testing",
+    "card.performance": "Performance Testing",
+    "tag.functional": "Functional",
+    "tag.automated": "Automated",
+    "tag.exploratory": "Exploratory",
+    "tag.regression": "Regression",
+    "tag.integration": "Integration",
+    "tag.accessibility": "Accessibility",
+    "tag.blackbox": "Black Box",
+    "tag.load": "Load",
+    "tag.stress": "Stress",
+    "tag.spike": "Spike",
+    "projects.title": "Projects",
+    "projects.subtitle": "Hands-on labs and automations that showcase my skills",
+    "proj.devops.title": "Tasks Backend — DevOps Lab",
+    "proj.devops.desc": "Complete DevOps lab with CI/CD pipeline in Jenkins, automated rollback, Docker Compose orchestrating 8 services, OAuth2 authentication with Keycloak, messaging with RabbitMQ, caching with Redis, migrations with Flyway and observability with Prometheus + Grafana.",
+    "proj.api.title": "API Tests with Playwright",
+    "proj.api.desc": "API test automation with Playwright and TypeScript, covering 51 scenarios for Login, Users, Products and Carts. Architecture with Service Pattern, custom fixtures, schema validation and dynamic data with Faker.",
+    "proj.ui.title": "UI Automation — Multi-Framework",
+    "proj.ui.desc": "Same application (Swag Labs) automated in 4 different frameworks, demonstrating mastery and versatility in E2E web automation.",
+    "proj.perf.title": "Performance Testing with k6",
+    "proj.perf.desc": "Load, stress, spike and endurance tests using k6 for API performance validation.",
+    "btn.github": "View on GitHub",
+    "contact.title": "Contact",
+    "contact.subtitle": "Let's have a chat",
+    "btn.viewgithub": "View GitHub",
+    "footer": 'Made with ❤️ by <a href="https://github.com/josuejorge">Josué Jorge</a> &mdash; 2026'
+  },
+  es: {
+    "nav.about": "Acerca",
+    "nav.skills": "Habilidades",
+    "nav.projects": "Proyectos",
+    "nav.contact": "Contacto",
+    "hero.role": "QA Engineer Specialist",
+    "hero.desc": "Especialista en calidad de software, automatización de pruebas e integración continua. Apasionado por entregar software confiable con eficiencia y trazabilidad.",
+    "about.title": "Sobre mí",
+    "about.p1": 'Profesional con más de 7 años de experiencia en tecnología, enfocado en <strong>garantía de calidad de software</strong>, especializado en la creación de automatizaciones de pruebas robustas con Robot Framework, Cypress, Playwright y Selenium.',
+    "about.p2": 'Complemento mi actuación en QA con conocimientos en <strong>DevOps orientado a automatización de pruebas</strong>, incluyendo pipelines CI/CD con Jenkins, Docker para aprovisionamiento de entornos, monitoreo con Grafana y Prometheus y análisis de calidad de código con SonarQube.',
+    "about.p3": "Tengo experiencia con múltiples bases de datos (SQL Server, PostgreSQL, Oracle, MongoDB, Redis), mensajería con RabbitMQ y metodologías ágiles como Scrum y Kanban.",
+    "stat.frameworks": "Frameworks de prueba",
+    "stat.languages": "Lenguajes",
+    "stat.databases": "Bases de datos",
+    "stat.pipelines": "Pipelines & Deploy",
+    "hl.automation": "Automatización de Pruebas",
+    "hl.automation.desc": "Pruebas E2E, API, unitarias y de regresión con múltiples herramientas",
+    "hl.cicd": "CI/CD & DevOps",
+    "hl.cicd.desc": "Pipelines con Jenkins, GitHub Actions y Azure DevOps, Docker Compose y Flyway",
+    "hl.observability": "Observabilidad",
+    "hl.observability.desc": "Monitoreo y alertas con Grafana, Prometheus y análisis con Sonar",
+    "hl.agile": "Metodologías Ágiles",
+    "hl.agile.desc": "Scrum, Kanban y gestión de tareas con Jira en equipos de producto",
+    "skills.title": "Habilidades",
+    "skills.subtitle": "Tecnologías y herramientas que utilizo a diario",
+    "card.automation": "Automatización de Pruebas",
+    "card.languages": "Lenguajes",
+    "card.cicd": "CI/CD & Build",
+    "card.databases": "Bases de Datos",
+    "card.observability": "Observabilidad",
+    "card.infra": "Infra & Mensajería",
+    "card.api": "Pruebas de API",
+    "card.management": "Gestión & Metodologías",
+    "card.strategies": "Estrategias de prueba",
+    "card.mobile": "Mobile Testing",
+    "card.performance": "Pruebas de Rendimiento",
+    "tag.functional": "Funcionales",
+    "tag.automated": "Automatizados",
+    "tag.exploratory": "Exploratorios",
+    "tag.regression": "Regresivos",
+    "tag.integration": "Integración",
+    "tag.accessibility": "Accesibilidad",
+    "tag.blackbox": "Caja Negra",
+    "tag.load": "Carga",
+    "tag.stress": "Estrés",
+    "tag.spike": "Pico",
+    "projects.title": "Proyectos",
+    "projects.subtitle": "Laboratorios prácticos y automatizaciones que demuestran mis habilidades",
+    "proj.devops.title": "Tasks Backend — Lab DevOps",
+    "proj.devops.desc": "Laboratorio DevOps completo con pipeline CI/CD en Jenkins, rollback automatizado, Docker Compose orquestando 8 servicios, autenticación OAuth2 con Keycloak, mensajería con RabbitMQ, caché con Redis, migraciones con Flyway y observabilidad con Prometheus + Grafana.",
+    "proj.api.title": "API Tests with Playwright",
+    "proj.api.desc": "Automatización de pruebas de API con Playwright y TypeScript, cubriendo 51 escenarios de Login, Usuarios, Productos y Carritos. Arquitectura con Service Pattern, fixtures personalizados, validación de schema y datos dinámicos con Faker.",
+    "proj.ui.title": "UI Automation — Multi-Framework",
+    "proj.ui.desc": "Misma aplicación (Swag Labs) automatizada en 4 frameworks diferentes, demostrando dominio y versatilidad en automatización E2E web.",
+    "proj.perf.title": "Pruebas de Rendimiento con k6",
+    "proj.perf.desc": "Pruebas de carga, estrés, pico y larga duración utilizando k6 para validación de rendimiento de APIs.",
+    "btn.github": "Ver en GitHub",
+    "contact.title": "Contacto",
+    "contact.subtitle": "Hablemos",
+    "btn.viewgithub": "Ver GitHub",
+    "footer": 'Hecho con ❤️ por <a href="https://github.com/josuejorge">Josué Jorge</a> &mdash; 2026'
+  }
+};
+
+function setLanguage(lang) {
+  const t = translations[lang];
+  if (!t) return;
+
+  document.documentElement.lang = lang;
+  localStorage.setItem("lang", lang);
+
+  document.querySelectorAll("[data-i18n]").forEach(function (el) {
+    var key = el.getAttribute("data-i18n");
+    if (t[key] !== undefined) {
+      if (el.hasAttribute("data-i18n-html")) {
+        el.innerHTML = t[key];
+      } else {
+        el.textContent = t[key];
+      }
+    }
+  });
+
+  var sel = document.getElementById("lang-select");
+  if (sel) sel.value = lang;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var saved = localStorage.getItem("lang") || "pt-BR";
+  setLanguage(saved);
+
+  var sel = document.getElementById("lang-select");
+  if (sel) {
+    sel.addEventListener("change", function () {
+      setLanguage(this.value);
+    });
+  }
+});
