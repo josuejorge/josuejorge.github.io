@@ -12,10 +12,18 @@
 
   <!-- NAV -->
   <nav>
-    <span class="nav-logo">JJ</span>
-    <ul class="nav-links">
+    <div class="nav-left">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <span class="nav-logo">JJ</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
       <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+      <li><a href="#certificacoes" data-i18n="nav.certs">Certificações</a></li>
       <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
       <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
     </ul>
@@ -109,21 +117,24 @@
         <div class="highlight-dot" style="background: var(--accent);"></div>
         <div class="highlight-text">
           <strong data-i18n="hl.automation">Automação de Testes</strong>
-          <span data-i18n="hl.automation.desc">Testes E2E, API, unitários e de regressão com múltiplas ferramentas</span>
+          <span data-i18n="hl.automation.desc">Testes E2E, API, unitários e de regressão com múltiplas
+            ferramentas</span>
         </div>
       </div>
       <div class="highlight-item">
         <div class="highlight-dot" style="background: var(--accent2);"></div>
         <div class="highlight-text">
           <strong data-i18n="hl.cicd">CI/CD & DevOps</strong>
-          <span data-i18n="hl.cicd.desc">Esteiras com Jenkins, GitHub Actions e Azure DevOps, Docker Compose e Flyway</span>
+          <span data-i18n="hl.cicd.desc">Esteiras com Jenkins, GitHub Actions e Azure DevOps, Docker Compose e
+            Flyway</span>
         </div>
       </div>
       <div class="highlight-item">
         <div class="highlight-dot" style="background: var(--accent3);"></div>
         <div class="highlight-text">
           <strong data-i18n="hl.observability">Observabilidade</strong>
-          <span data-i18n="hl.observability.desc">Monitoramento e alertas com Grafana, Prometheus e análise com Sonar</span>
+          <span data-i18n="hl.observability.desc">Monitoramento e alertas com Grafana, Prometheus e análise com
+            Sonar</span>
         </div>
       </div>
       <div class="highlight-item">
@@ -221,12 +232,27 @@
 
       <div class="skill-card">
         <div class="skill-card-header">
+          <div class="skill-icon">☁️</div>
+          <span class="skill-card-title" data-i18n="card.cloud">Cloud</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">AWS</span>
+          <span class="tag">Google Cloud Platform</span>
+          <span class="tag">Google Kubernetes Engine</span>
+          <span class="tag">Azure DevOps</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
           <div class="skill-icon">📦</div>
           <span class="skill-card-title" data-i18n="card.infra">Infra & Mensageria</span>
         </div>
         <div class="skill-tags">
           <span class="tag">Docker</span>
           <span class="tag">Docker Compose</span>
+          <span class="tag">Portainer</span>
+          <span class="tag">Kubernetes</span>
           <span class="tag">Nginx</span>
           <span class="tag">Keycloak</span>
           <span class="tag">RabbitMQ</span>
@@ -322,10 +348,63 @@
 
   <hr class="section-divider">
 
+  <!-- CERTIFICAÇÕES -->
+  <section id="certificacoes">
+    <h2 class="section-title" data-i18n="certs.title">Certificações</h2>
+    <p class="section-subtitle" data-i18n="certs.subtitle">Credenciais profissionais reconhecidas internacionalmente</p>
+
+    <div class="certs-grid">
+
+      <div class="cert-card">
+        <div class="cert-badge">CTAL</div>
+        <div class="cert-info">
+          <h3 data-i18n="cert.ctal.name">ISTQB Certified Tester Advanced Level</h3>
+          <p data-i18n="cert.ctal.desc">Certificação avançada do ISTQB que valida competências aprofundadas em gestão,
+            técnicas e automação de testes. Pré-requisito para certificações de especialista.</p>
+          <span class="cert-org">ISTQB</span>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-badge">CTFL</div>
+        <div class="cert-info">
+          <h3 data-i18n="cert.ctfl.name">ISTQB Certified Tester Foundation Level</h3>
+          <p data-i18n="cert.ctfl.desc">Certificação base do ISTQB que cobre fundamentos de teste de software, técnicas
+            de design de teste, gestão de testes e ferramentas de suporte.</p>
+          <span class="cert-org">ISTQB</span>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-badge" style="background: rgba(255,153,0,0.15); color: #f90;">AWS CCP</div>
+        <div class="cert-info">
+          <h3 data-i18n="cert.aws.name">AWS Certified Cloud Practitioner</h3>
+          <p data-i18n="cert.aws.desc">Certificação foundational da Amazon Web Services que valida conhecimentos em
+            conceitos de nuvem, serviços AWS, segurança, arquitetura, pricing e suporte.</p>
+          <span class="cert-org">Amazon Web Services</span>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-badge" style="background: rgba(0,120,212,0.15); color: #0078d4;">AZ-900</div>
+        <div class="cert-info">
+          <h3 data-i18n="cert.az900.name">Microsoft Azure Fundamentals</h3>
+          <p data-i18n="cert.az900.desc">Certificação foundational da Microsoft que valida conhecimentos em conceitos de
+            nuvem, serviços do Azure, segurança, privacidade, compliance e pricing.</p>
+          <span class="cert-org">Microsoft</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
   <!-- PROJETOS -->
   <section id="projetos">
     <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
-    <p class="section-subtitle" data-i18n="projects.subtitle">Laboratórios práticos e automações que demonstram minhas habilidades</p>
+    <p class="section-subtitle" data-i18n="projects.subtitle">Laboratórios práticos e automações que demonstram minhas
+      habilidades</p>
 
     <div class="skills-categories">
 
@@ -466,10 +545,23 @@
   </section>
 
   <footer>
-    <p data-i18n="footer" data-i18n-html>Feito com ❤️ por <a href="https://github.com/josuejorge">Josué Jorge</a> &mdash; 2026</p>
+    <p data-i18n="footer" data-i18n-html>Feito com ❤️ por <a href="https://github.com/josuejorge">Josué Jorge</a>
+      &mdash; 2026</p>
   </footer>
 
   <script src="js/i18n.js"></script>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      this.classList.toggle('active');
+      document.getElementById('nav-links').classList.toggle('open');
+    });
+    document.querySelectorAll('#nav-links a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.getElementById('hamburger').classList.remove('active');
+        document.getElementById('nav-links').classList.remove('open');
+      });
+    });
+  </script>
 </body>
 
 </html>
